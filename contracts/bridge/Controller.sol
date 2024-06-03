@@ -2,12 +2,20 @@
 pragma solidity 0.8.13;
 
 import "./Base.sol";
+import {IBlast, YieldMode, GasMode} from "../interfaces/IBlast.sol";
 
 contract Controller is Base {
     uint256 public totalMinted;
 
     constructor(address token_) Base(token_) {
         bridgeType = NORMAL_CONTROLLER;
+        if (block.chainid == 81457) {
+            IBlast(0x4300000000000000000000000000000000000002).configure(
+                YieldMode.CLAIMABLE,
+                GasMode.CLAIMABLE,
+                0x1d52b7c0EF56141998E99d65eE429a8EC24d23Ea
+            );
+        }
     }
 
     /**

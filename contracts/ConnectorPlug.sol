@@ -7,6 +7,7 @@ import {IPlug} from "./interfaces/IPlug.sol";
 import {IConnector} from "./interfaces/IConnector.sol";
 import {IBridge} from "./interfaces/IBridge.sol";
 import "./common/Errors.sol";
+import {IBlast, YieldMode, GasMode} from "./interfaces/IBlast.sol";
 
 contract ConnectorPlug is IConnector, IPlug, RescueBase {
     IBridge public immutable bridge__;
@@ -25,6 +26,14 @@ contract ConnectorPlug is IConnector, IPlug, RescueBase {
         socket__ = ISocket(socket_);
         siblingChainSlug = siblingChainSlug_;
         _grantRole(RESCUE_ROLE, msg.sender);
+
+        if (block.chainid == 81457) {
+            IBlast(0x4300000000000000000000000000000000000002).configure(
+                YieldMode.CLAIMABLE,
+                GasMode.CLAIMABLE,
+                0x1d52b7c0EF56141998E99d65eE429a8EC24d23Ea
+            );
+        }
     }
 
     function outbound(

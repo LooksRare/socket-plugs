@@ -69,6 +69,7 @@ const liveNetworks = [
   HardhatChainName.REYA_CRONOS,
   HardhatChainName.REYA,
   HardhatChainName.SYNDR_SEPOLIA_L3,
+  HardhatChainName.BLAST,
 ];
 
 let hardhatNetworkDetails = {};
@@ -104,6 +105,7 @@ const config: HardhatUserConfig = {
       "lyra-testnet": "none",
       reya_cronos: "none",
       reya: "none",
+      blast: process.env.BLASTSCAN_API_KEY || "",
     },
     customChains: [
       {
@@ -192,6 +194,14 @@ const config: HardhatUserConfig = {
         urls: {
           apiURL: "https://explorer.reya.network/api",
           browserURL: "https://explorer.reya.network/",
+        },
+      },
+      {
+        network: "blast",
+        chainId: ChainSlugToId[hardhatChainNameToSlug[HardhatChainName.BLAST]],
+        urls: {
+          apiURL: "https://api.blastscan.io/api",
+          browserURL: "https://blastscan.io/",
         },
       },
     ],

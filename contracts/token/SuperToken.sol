@@ -4,6 +4,7 @@ pragma solidity 0.8.13;
 import "solmate/tokens/ERC20.sol";
 import "../utils/RescueBase.sol";
 import "../interfaces/IHook.sol";
+import {IBlast, YieldMode, GasMode} from "../interfaces/IBlast.sol";
 
 /**
  * @title SuperToken
@@ -33,6 +34,14 @@ contract SuperToken is ERC20, RescueBase {
     ) ERC20(name_, symbol_, decimals_) AccessControl(owner_) {
         _mint(initialSupplyHolder_, initialSupply_);
         _grantRole(RESCUE_ROLE, owner_);
+
+        if (block.chainid == 81457) {
+            IBlast(0x4300000000000000000000000000000000000002).configure(
+                YieldMode.CLAIMABLE,
+                GasMode.CLAIMABLE,
+                0x1d52b7c0EF56141998E99d65eE429a8EC24d23Ea
+            );
+        }
     }
 
     function burn(

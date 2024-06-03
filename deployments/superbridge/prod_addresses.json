@@ -1974,5 +1974,19 @@
         }
       }
     }
+  },
+  "blast": {
+    "81457": {
+      "LOOKS": {
+        "SuperToken": "0x406F10d635be12ad33D6B133C6DA89180f5B999e",
+        "Controller": "0xDa0072593f6F9B7a510103602024d882eBc756fc",
+        "LimitHook": "0x12b2624c50c0C352181Be843466DDdCf35cc31b0",
+        "connectors": {
+          "1": {
+            "FAST": "0x5946F65cAc16cB1300d6031B3BbdF59e8539EAcE"
+          }
+        }
+      }
+    }
   }
 }
