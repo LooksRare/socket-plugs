@@ -1,0 +1,80 @@
+{
+  "1": [
+    [
+      "0x8843557Fd6005d617A735731BF1bAb0461af55E4",
+      "ConnectorPlug",
+      "contracts/ConnectorPlug.sol",
+      [
+        "0xa83B4006c16DAeAb2718294696c0122519195137",
+        "0x943AC2775928318653e91d350574436A1b9b16f9",
+        81457
+      ]
+    ],
+    [
+      "0x192fF97C170bE6782eDaC70aBB04e8BCd068a3aB",
+      "LimitHook",
+      "contracts/hooks/LimitHook.sol",
+      [
+        "0x3ab105F0e4A22ec4A96a9b0Ca90c5C534d21f3a7",
+        "0xa83B4006c16DAeAb2718294696c0122519195137",
+        false
+      ]
+    ],
+    [
+      "0xa83B4006c16DAeAb2718294696c0122519195137",
+      "Vault",
+      "contracts/bridge/Vault.sol",
+      ["0xf4d2888d29D722226FafA5d9B24F9164c092421E"]
+    ],
+    [
+      "0x36cD0C67f90dAF9e70a2D0733e91bA73eCDc220D",
+      "Vault",
+      "contracts/bridge/Vault.sol",
+      ["0xf4d2888d29D722226FafA5d9B24F9164c092421E"]
+    ]
+  ],
+  "81457": [
+    [
+      "0x5946F65cAc16cB1300d6031B3BbdF59e8539EAcE",
+      "ConnectorPlug",
+      "contracts/ConnectorPlug.sol",
+      [
+        "0xDa0072593f6F9B7a510103602024d882eBc756fc",
+        "0xB6fb3062405985F700fa23758A3053162ddBeFb9",
+        1
+      ]
+    ],
+    [
+      "0x12b2624c50c0C352181Be843466DDdCf35cc31b0",
+      "LimitHook",
+      "contracts/hooks/LimitHook.sol",
+      [
+        "0x3ab105F0e4A22ec4A96a9b0Ca90c5C534d21f3a7",
+        "0xDa0072593f6F9B7a510103602024d882eBc756fc",
+        false
+      ]
+    ],
+    [
+      "0xDa0072593f6F9B7a510103602024d882eBc756fc",
+      "Controller",
+      "contracts/bridge/Controller.sol",
+      ["0x406F10d635be12ad33D6B133C6DA89180f5B999e"]
+    ],
+    [
+      "0x406F10d635be12ad33D6B133C6DA89180f5B999e",
+      "SuperToken",
+      "contracts/token/SuperToken.sol",
+      [
+        "Blast LooksRare Token",
+        "bLOOKS",
+        18,
+        "0x1d52b7c0EF56141998E99d65eE429a8EC24d23Ea",
+        "0x3ab105F0e4A22ec4A96a9b0Ca90c5C534d21f3a7",
+        {
+          "type": "BigNumber",
+          "hex": "0x00"
+        }
+      ]
+    ]
+  ]
+}

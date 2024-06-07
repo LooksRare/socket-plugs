@@ -13,6 +13,7 @@ export const ExistingTokenAddresses: {
     [Tokens.WSTETH]: "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0",
     [Tokens.DAI]: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
     [Tokens.ETH]: "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
+    [Tokens.LOOKS]: "0xf4d2888d29D722226FafA5d9B24F9164c092421E",
   },
   [ChainSlug.OPTIMISM]: {
     [Tokens.USDC]: "0x8e0b7e6062272B5eF4524250bFFF8e5Bd3497757",
